@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+</head>
+
+<body>
+
+    <button id="btn">Click Me</button>
+    <p id="msg"></p>
+
+    <script>
+        let button = document.getElementById("btn");
+
+        function showMessage() {
+            document.getElementById("msg").innerHTML =
+                "Button Clicked!";
+        }
+
+        // Mouse Event
+        button.addEventListener("click", showMessage);
+
+        // Keyboard Event
+        document.addEventListener("keydown", function(event) {
+            console.log("Key Pressed:", event.key);
+        });
+
+        // Remove Event after 5 seconds
+        setTimeout(() => {
+            button.removeEventListener("click", showMessage);
+        }, 5000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* External CSS Styles */
+.external-box {
+    background-color: #e7ffe7;
+    border: 2px dashed #33cc33;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.external-box h2 {
+    color: green;
+    text-shadow: 1px 1px 2px #aaffaa;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    input { display: block; margin: 10px 0; padding: 8px; width: 250px; }
+    span { color: red; font-size: 14px; display: none; }
+  </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="myForm" onsubmit="return validateForm()">
+  <label>Username:</label>
+  <input type="text" id="username" oninput="checkUsername()">
+  <span id="userError">Username must be at least 4 characters!</span>
+
+  <label>Email:</label>
+  <input type="email" id="email" oninput="checkEmail()">
+  <span id="emailError">Enter a valid email!</span>
+
+  <label>Password:</label>
+  <input type="password" id="password" oninput="checkPassword()">
+  <span id="passError">Password must be 6+ characters!</span>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+
+// On-input validation functions
+function checkUsername() {
+  let username = document.getElementById("username").value;
+  let userError = document.getElementById("userError");
+  if (username.length < 4) userError.style.display = "inline";
+  else userError.style.display = "none";
+}
+
+function checkEmail() {
+  let email = document.getElementById("email").value;
+  let emailError = document.getElementById("emailError");
+  if (!email.includes("@") || !email.includes(".")) emailError.style.display = "inline";
+  else emailError.style.display = "none";
+}
+
+function checkPassword() {
+  let password = document.getElementById("password").value;
+  let passError = document.getElementById("passError");
+  if (password.length < 6) passError.style.display = "inline";
+  else passError.style.display = "none";
+}
+
+// onsubmit validation using alert()
+function validateForm() {
+  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if (username.length < 4) {
+    alert("Username must be at least 4 characters!");
+    return false; // prevents form submission
+  }
+
+  if (!email.includes("@") || !email.includes(".")) {
+    alert("Enter a valid email address!");
+    return false;
+  }
+
+  if (password.length < 6) {
+    alert("Password must be 6+ characters!");
+    return false;
+  }
+
+  alert("Form submitted successfully!");
+  return true;
+}
+
+</script>
+
+</body>
+</html>

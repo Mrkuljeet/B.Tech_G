@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS: Box Model & Background Styling</title>
+
+    <style>
+        /* 🔹 Page Background */
+        body {
+            background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🔹 Page Container */
+        .container {
+            
+            width: 80%;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 🔹 Header Section */
+        header {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            border-bottom: 4px solid #005bb5;
+        }
+
+        /* 🔹 Content Box (Box Model Demo) */
+        .box {
+            background-color: #f5f9ff;
+            border: 3px solid #0073e6;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .box h2 {
+            color: #005bb5;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* 🔹 Highlight Box with different border and padding */
+        .highlight {
+            border: 4px dashed #ff9900;
+            background-color: #fff8e1;
+            margin: 30px 0;
+            padding: 25px;
+        }
+
+        /* 🔹 Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎨 Advanced CSS Styling: Box Model & Background</h1>
+        </header>
+
+        <section class="box">
+            <h2>Understanding the Box Model</h2>
+            <p>
+                Every HTML element is treated as a box in CSS. The box model consists of:
+                <b>Content, Padding, Border,</b> and <b>Margin</b>.  
+                Padding adds space inside the element, border surrounds it, and margin creates space outside it.
+            </p>
+        </section>
+
+        <section class="highlight">
+            <h2>Example of Margins, Padding, and Borders</h2>
+            <p>
+                This box has a dashed orange border, 25px padding (inner space),
+                and 30px margin (outer space).  
+                It demonstrates how these CSS properties create visually balanced layouts.
+            </p>
+        </section>
+
+        <section class="box">
+            <h2>Background Images</h2>
+            <p>
+                The page uses a beautiful full-screen background image.  
+                The <code>background-size: cover;</code> and <code>background-attachment: fixed;</code> properties
+                make the image stretch nicely and stay fixed while scrolling.
+            </p>
+        </section>
+
+        

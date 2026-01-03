@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive Web Page</title>
+
+<style>
+  /* 🌍 Base / Mobile-First Styles */
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Poppins", sans-serif; }
+
+  body {
+    background: linear-gradient(120deg, #a2c2e3, #f9f9f9);
+    color: #222;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+
+  header {
+    background-color: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #005bb5;
+    border-radius: .6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .8rem 1.2rem;
+    display: block;
+    font-size: 1rem;
+  }
+
+  nav a:hover {
+    background: #004a99;
+    border-radius: .3rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  section {
+    background: #fff;
+    border-radius: .6rem;
+    padding: 1.2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  section h2 {
+    color: #0073e6;
+    margin-bottom: .6rem;
+  }
+
+  footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: .6rem;
+    margin-top: 2rem;
+  }
+
+  /* 📱 Tablet View */
+  @media (min-width: 600px) {
+    main {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    section {
+      flex: 1 1 45%;
+    }
+  }
+
+  /* 💻 Desktop View */
+  @media (min-width: 900px) {
+    header { font-size: 2rem; }
+    section { flex: 1 1 30%; }
+    nav a { font-size: 1.1rem; padding: 1rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>🌐 Responsive Web Page (Media Queries)</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Mobile-First Design</h2>
+    <p>Starts with small screen styling, then expands for tablets and desktops.</p>
+  </section>
+
+  <section>
+    <h2>Flexible Units</h2>
+    <p>Uses <b>rem</b> and <b>%</b> for padding and layout — fits every screen perfectly.</p>
+  </section>
+
+  <section>
+    <h2>Media Queries</h2>
+    <p>Layout changes at <b>600px</b> (tablet) and <b>900px</b> (desktop).</p>
+  </section>
+
+  <section>
+    <h2>Responsive Layout</h2>
+    <p>Single column on mobile → two on tablet → three on desktop.</p>
+  </section>
+</main>
+

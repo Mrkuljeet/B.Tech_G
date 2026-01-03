@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security & Ethical Hacking - Responsive Layout</title>
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, sans-serif;background:#eef3ff;color:#1e1e1e;}
+
+/* HEADER */
+header{
+  background:#1e3a8a;
+  color:white;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 3px 10px rgba(0,0,0,0.25);
+}
+header h1{font-size:26px;margin-bottom:4px;}
+header p{font-size:13px;}
+
+/* MAIN WRAPPER */
+.layout{padding:16px;}
+.clearfix::after{content:"";display:block;clear:both;}
+
+/* SIDEBAR + CONTENT */
+.sidebar{
+  background:#dbe6ff;
+  border:1px solid #b4c8ff;
+  border-radius:10px;
+  padding:14px;
+  margin-bottom:16px;
+}
+.sidebar h2{
+  font-size:19px;
+  margin-bottom:8px;
+  color:#1e3a8a;
+}
+.sidebar ul{list-style:none;margin-top:4px;}
+.sidebar li{padding:6px 0;font-size:14px;}
+.sidebar li::before{content:"• ";color:#1e3a8a;}
+
+.content{
+  background:white;
+  border-radius:10px;
+  border:1px solid #d6d9e6;
+  padding:18px;
+  min-height:220px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.08);
+}
+.content h2{
+  border-bottom:1px solid #d8d8d8;
+  padding-bottom:6px;
+  margin-bottom:10px;
+  font-size:21px;
+}
+.content p{font-size:15px;line-height:1.6;margin-bottom:12px;}
+.highlight-box{
+  background:#eff6ff;
+  border:1px dashed #6ea8ff;
+  padding:10px;
+  margin-top:12px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+/* ====================== BREAKPOINT 1 ======================
+   MOBILE — (<600px) — Stacked Layout
+========================================================= */
+@media (max-width:599px){
+  .sidebar,.content{width:100%;}
+}
+
+/* ====================== BREAKPOINT 2 ======================
+   TABLET — (600–900px) — Float Layout
+========================================================= */
+@media (min-width:600px) and (max-width:899px){
+  .sidebar{
+    float:left;      /* FLOAT USED HERE */
+    width:30%;
+    margin-right:2%;
+    margin-bottom:0;
+  }
+  .content{
+    float:right;     /* FLOAT USED HERE */
+    width:68%;
+  }
+}
+
+/* ====================== BREAKPOINT 3 ======================
+   DESKTOP — (>900px) — Flexbox Layout
+========================================================= */
+@media (min-width:900px){
+  .layout{
+    display:flex;     /* FLEXBOX USED HERE */
+    gap:18px;
+    max-width:1200px;
+    margin:18px auto;
+  }
+  .sidebar{width:260px;flex-shrink:0;}
+  .content{flex:1;}
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:13px;
+  color:#3b3b3b;
+  margin-top:18px;
+  padding:10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cyber Security & Ethical Hacking</h1>
+  <p>Responsive Layout · Flexbox · Float · Media Queries</p>
+</header>
+
+<div class="layout clearfix">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Topics Covered</h2>
+    <ul>
+      <li>What is Cyber Security?</li>
+      <li>Ethical Hacking</li>
+      <li>Linux & Kali Tools</li>
+      <li>Penetration Testing</li>
+      <li>Bug Bounty</li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+    <h2>Introduction to Cyber Security</h2>
+    <p>
+      Cyber Security is the practice of protecting computer systems, networks,
+      and digital data from attacks, unauthorized access and damage.
+    </p>
+
+    <p>
+      Ethical Hacking is the authorized process of identifying vulnerabilities
+      in systems to improve security. It helps organizations fix weaknesses
+      before cyber criminals exploit them.
+    </p>
+
+    <div class="highlight-box">
+      This webpage demonstrates a responsive layout:
+      <br>✔ Mobile (<600px): stacked layout
+      <br>✔ Tablet (600–900px): float + clear layout
+      <br>✔ Desktop (>900px): flexbox layout
+    </div>
+  </main>
+
+</div>
+
+<footer>
+  Created by: <strong>Mr kuljeet</strong> · B TECH  / CS Practical Assignment
+</footer>
+
+</body>
+</html>

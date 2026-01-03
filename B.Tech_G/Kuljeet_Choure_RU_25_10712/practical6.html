@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Styling Methods (Inline, Internal & External)</title>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS Styles */
+        body {
+            background-color: #fffdff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .internal-box {
+            background-color: #fff8dc;
+            border-left: 6px solid #ffcc00;
+            margin: 30px auto;
+            padding: 20px;
+            width: 80%;
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>🌈 CSS Styling Methods Demonstration</header>
+
+    <!-- Inline CSS Example -->
+    <section style="background-color:#ffe6e6; border:2px solid red; padding:20px; margin:30px auto; width:80%; text-align:center; border-radius:10px;">
+        <h2 style="color:red;">This section uses Inline CSS</h2>
+        <p style="font-size:18px;">Inline CSS is applied directly inside an HTML tag using the <b>style</b> attribute.</p>
+    </section>
+
+    <section class="internal-box">
+        <h2 style="color:#ff9900;">This section uses Internal CSS</h2>
+        <p>Internal CSS is written inside the <b>&lt;style&gt;</b> tag within the HTML file’s <b>&lt;head&gt;</b> section.</p>
+    </section>
+
+    <section class="external-box">
+        <h2>This section uses External CSS</h2>
+        <p>External CSS is written in a separate file (e.g., <b>style.css</b>) and linked using the <b>&lt;link&gt;</b> tag.</p>
+    </section>
+
+    <footer>Created by [kuljeet Choure] | Web Development Fundamental</footer>
+
+</body>
+</html>

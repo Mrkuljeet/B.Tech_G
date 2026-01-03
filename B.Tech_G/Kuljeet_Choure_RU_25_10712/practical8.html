@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Selectors Demonstration</title>
+
+  <style>
+    /* 🔹 Universal Selector — applies to all elements */
+    * {
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+    }
+
+    /* 🔹 Body styling */
+    body {
+      background: linear-gradient(120deg, #a2c2e3, #f8f9fa);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0066cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 4px solid #004c99;
+    }
+
+    /* 🔹 Class Selector (.className) */
+    .class-example {
+      background-color: #e6f3ff;
+      border: 2px solid #0099ff;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    /* 🔹 ID Selector (#idName) */
+    #id-example {
+      background-color: #fff7e6;
+      border: 2px dashed #ff9900;
+      padding: 15px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    /* 🔹 Descendant Selector (parent child) */
+    .descendant-example p {
+      color: #333;
+      font-style: italic;
+      margin-left: 20px;
+    }
+
+    /* 🔹 Group Selector (element1, element2, ...) */
+    h2, h3 {
+      color: #005bb5;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    /* 🔹 Footer styling */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎨 Demonstration of CSS Selectors</h1>
+  </header>
+
+  <!-- Class Selector Example -->
+  <section class="class-example">
+    <h2>Class Selector (.class)</h2>
+    <p>
+      The <b>class selector</b> is used with a dot (.) before the name.
+      It can be applied to multiple elements.
+    </p>
+    <p class="note">Example: <code>.class-example { color: blue; }</code></p>
+  </section>
+
+  <!-- ID Selector Example -->
+  <section id="id-example">
+    <h2>ID Selector (#id)</h2>
+    <p>
+      The <b>ID selector</b> uses a hash (#) before the name and should be unique for each element.
+    </p>
+    <p>Example: <code>#id-example { border: 2px dashed orange; }</code></p>
+  </section>
+
+  <!-- Descendant Selector Example -->
+  <section class="descendant-example class-example">
+    <h2>Descendant Selector (parent child)</h2>
+    <p>
+      The <b>descendant selector</b> targets elements nested inside another element.
+    </p>
+    <div>
+      <p>This paragraph is styled because it is inside <code>.descendant-example</code>.</p>
+    </div>
+  </section>
+
+  

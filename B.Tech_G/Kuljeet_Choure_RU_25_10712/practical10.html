@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Div and Span Layout</title>
+
+<style>
+  /* 🌍 Basic Styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(120deg, #e0f7fa, #f9f9f9);
+    color: #333;
+    padding: 1rem;
+  }
+
+  /* 🧱 Layout using DIV */
+  .header, .footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .box {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 45%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  /* 🎨 Span Styling */
+  .highlight {
+    color: #0073e6;
+    font-weight: bold;
+  }
+
+  .important {
+    background-color: yellow;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🌐 Using DIV and SPAN with CSS</h1>
+  </div>
+
+  <div class="main">
+    <div class="box">
+      <h3>About Div</h3>
+      <p>
+        A <span class="highlight">&lt;div&gt;</span> element is a block-level container used for 
+        grouping content and creating page layouts.
+      </p>
+    </div>
+
+    <div class="box">
+      <h3>About Span</h3>
+      <p>
+        A <span class="important">&lt;span&gt;</span> is an inline container, perfect for styling 
+        small parts of text like <span class="highlight">keywords</span> or 
+        <span class="important">important phrases</span>.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Created by [Kuljeet Choure] | Web Tech Lab
+  </div>
+
+</body>
+</html>
+e
